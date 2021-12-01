@@ -1,23 +1,4 @@
-# react 기초 강의
-
-## 강의 주요 내용
-
-- react fundamentals
-- webpack
-- redux
-- es6
-
-## 서브 내용
-
-- express
-- mognoDB
-- mogoose
-
-## 프로젝트
-
-- 전화번호부
-- 카운터(redux)
-- 무한 스크롤형 메모패드
+# react 기초
 
 ## React
 
@@ -47,9 +28,10 @@ document.querySelector("#content").innerHTML = "hi yong";
 
 반면 virtual DOM은 이를 추상한 것으로 자바스크립트 객체이고, 이 안에서 처리하는 것은 이미 렌더링 된 html을 실제 dom을 사용해 처리하는 것보다 빠르다.
 
-참고
-[지그의 virtual DOM](https://youtu.be/PN_WmsgbQCo)
-[React and the virtual DOM](https://youtu.be/BYbgopx44vo)
+> 참고
+
+- [지그의 virtual DOM](https://youtu.be/PN_WmsgbQCo)
+- [React and the virtual DOM](https://youtu.be/BYbgopx44vo)
 
 ### React 장점
 
@@ -67,9 +49,25 @@ document.querySelector("#content").innerHTML = "hi yong";
 - 배우기 쉽지만, js 배경지식이 부족하다면 어려울 수 있다.
 - IE8 이하 지원 X
 
-## class
+## class Component와 functional Component
 
-ES6에 도입된 문법으로 상속받아 사용하고, 다른 언어에서도 그렇듯 생성자 메서드가 있다. js class안에서는 메서드만 만들 수 있다. 다른 언어는 사용해 보지 않았지만, 비슷하게 사용하는 듯 하다. functional component로만 개발해보았기 때문에 class문법을 익히기 좋을 것 같다.
+리액트에서는 클래스 컴포넌트와 함수형 컴포넌트를 사용할 수 있는데 클래스 컴포넌트는 올드한 스타일이고, 최신 스타일은 함수형 컴포넌트이다.
+
+함수형 컴포넌트에서는 상태를 관리 하는 방법으로 Hook을 사용한다.
+
+밑에 예제는 오래된 강의로써 class로 예제를 사용하게 되었다. 하지만, 간단한 예제이기 때문에 크게 상관이 없다.
+
+## 비구조화 할당
+
+react에서는 비구조화 할당을 자주 사용하기 때문에 익혀두면 좋다.
+
+[비구조화 할당](https://learnjs.vlpt.us/useful/06-destructuring.html)
+
+## webpack(모듈 번들러)
+
+- 여러개의 파일 중에 종속성이 존재하는 파일을 하나의 파일로 묶어준다.
+- 많은 파일을 묶어줌으로써 네트워크 요청을 최소화 시킬 수 있다.(비용절약)
+- 변수의 충돌을 최소화 할 수 있다.
 
 ## JSX
 
@@ -130,6 +128,12 @@ class App extends React.Componet {
 ```
 
 - JSX에서의 주석처리는 `{*...*}`로 한다. 주석 역시 태그 안에서 작성되어야한다.
+
+## Babel
+
+- 자바스크립트가 쓰이는 곳에서 신형 문법을 읽을 수 있게 컴파일을 해준다.
+- ES6문법을 ES5로 바꿔주는 것이 기본적인 역할
+- react에서 JSX를 읽게 해주는 것도 Babel이다.
 
 ## props
 
